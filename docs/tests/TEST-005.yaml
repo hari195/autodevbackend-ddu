@@ -1,0 +1,15 @@
+artifact_id: TEST-005
+title: "Data Persistence on Shutdown Test"
+description: |
+  Verify that all critical user data (settings, session state, media playback position)
+  is persisted to non-volatile storage during shutdown and can be restored on next startup.
+  Test data integrity even when shutdown is interrupted.
+status: draft
+priority: high
+asil_level: ASIL-B
+owner: "test-engineer"
+tags: [integration, shutdown, safety]
+test_type: Integration
+linked_requirements: [REQ-002]
+linked_architecture: [ARCH-001]
+

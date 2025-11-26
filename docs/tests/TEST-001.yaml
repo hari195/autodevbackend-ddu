@@ -1,0 +1,13 @@
+artifact_id: TEST-001
+title: "Startup Initialization Sequence Test"
+description: |
+  Verify that the system executes the complete initialization sequence within 5 seconds
+  and transitions from OFF to INITIALIZING to READY states in the correct order.
+status: draft
+priority: high
+asil_level: ASIL-B
+owner: "test-engineer"
+tags: [integration, startup, safety]
+test_type: Integration
+linked_requirements: [REQ-001, REQ-003]
+linked_architecture: [ARCH-001]

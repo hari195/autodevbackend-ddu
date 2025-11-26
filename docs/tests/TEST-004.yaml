@@ -1,0 +1,15 @@
+artifact_id: TEST-004
+title: "Graceful Shutdown Sequence Test"
+description: |
+  Verify that the system executes a graceful shutdown sequence, terminating all services
+  in the correct order and completing within 3 seconds. Verify state transition from
+  READY to SHUTTING_DOWN to OFF.
+status: draft
+priority: high
+asil_level: ASIL-B
+owner: "test-engineer"
+tags: [integration, shutdown, safety]
+test_type: Integration
+linked_requirements: [REQ-002, REQ-003]
+linked_architecture: [ARCH-001]
+

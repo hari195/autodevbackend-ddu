@@ -1,0 +1,14 @@
+artifact_id: TEST-006
+title: "State Transition Atomicity Test"
+description: |
+  Verify that state transitions are atomic and the system rejects new commands during
+  critical transitions (INITIALIZING, SHUTTING_DOWN).
+status: draft
+priority: high
+asil_level: ASIL-B
+owner: "test-engineer"
+tags: [unit, state-management, safety]
+test_type: Unit
+linked_requirements: [REQ-003]
+linked_architecture: [ARCH-001]
+

@@ -1,0 +1,15 @@
+artifact_id: TEST-007
+title: "Error Recovery During Startup Test"
+description: |
+  Test that the system attempts automatic recovery up to 3 times when encountering errors
+  during startup. Verify that the system enters SAFE_MODE after failed recovery attempts
+  and logs errors appropriately.
+status: draft
+priority: medium
+asil_level: ASIL-B
+owner: "test-engineer"
+tags: [integration, startup, safety]
+test_type: Integration
+linked_requirements: [REQ-003]
+linked_architecture: [ARCH-001]
+

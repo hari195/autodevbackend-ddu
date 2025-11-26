@@ -1,0 +1,14 @@
+artifact_id: TEST-003
+title: "Startup Progress Indication Test"
+description: |
+  Verify that visual feedback (progress indicator or splash screen) is displayed during
+  startup and remains visible until the system reaches READY state.
+status: draft
+priority: medium
+asil_level: ASIL-B
+owner: "test-engineer"
+tags: [system, startup, functional]
+test_type: System
+linked_requirements: [REQ-001]
+linked_architecture: [ARCH-001]
+
