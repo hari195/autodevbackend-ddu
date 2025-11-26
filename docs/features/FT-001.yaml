@@ -6,3 +6,5 @@ priority: medium
 asil_level: QM
 owner: me
 tags: []
+jira_issues:
+  - SCRUM-1
