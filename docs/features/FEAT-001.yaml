@@ -1,0 +1,34 @@
+artifact_id: FEAT-001
+title: Infotainment System Startup and Shutdown
+description: >
+  This feature implements the complete lifecycle management for the vehicle
+  infotainment system, including startup initialization, graceful shutdown,
+  and state transition management. The system follows a state machine pattern
+  with clear separation of concerns, ensuring reliable operation and proper
+  error handling during critical transitions.
+status: draft
+priority: high
+asil_level: ASIL-B
+owner: product-manager
+tags:
+  - lifecycle
+  - startup
+  - shutdown
+  - state-management
+  - safety
+linked_architecture:
+  - ARCH-001
+linked_requirements:
+  - REQ-001
+  - REQ-002
+  - REQ-003
+linked_tests:
+  - TEST-001
+  - TEST-002
+  - TEST-003
+  - TEST-004
+  - TEST-005
+  - TEST-006
+  - TEST-007
+jira_item_link: https://jira.example.com/browse/FEAT-001
+
