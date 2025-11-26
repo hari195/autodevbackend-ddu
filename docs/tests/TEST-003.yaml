@@ -1,4 +1,5 @@
 artifact_id: TEST-003
+artifact_type: test
 title: "Startup Progress Indication Test"
 description: |
   Verify that visual feedback (progress indicator or splash screen) is displayed during

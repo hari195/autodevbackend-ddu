@@ -1,4 +1,5 @@
 artifact_id: REQ-003
+artifact_type: requirement
 title: "State Transition Management"
 description: |
   The system shall maintain a well-defined state machine for startup and shutdown operations.

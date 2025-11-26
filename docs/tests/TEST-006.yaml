@@ -1,4 +1,5 @@
 artifact_id: TEST-006
+artifact_type: test
 title: "State Transition Atomicity Test"
 description: |
   Verify that state transitions are atomic and the system rejects new commands during

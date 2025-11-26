@@ -1,4 +1,5 @@
 artifact_id: TEST-004
+artifact_type: test
 title: "Graceful Shutdown Sequence Test"
 description: |
   Verify that the system executes a graceful shutdown sequence, terminating all services

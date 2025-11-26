@@ -1,4 +1,5 @@
 artifact_id: TEST-002
+artifact_type: test
 title: Service Availability Verification Test
 description: >
   Test that the system correctly verifies service availability during startup.

@@ -1,4 +1,5 @@
 artifact_id: ARCH-001
+artifact_type: architecture
 title: Infotainment System Startup and Shutdown Architecture
 description: >
   The startup and shutdown architecture for the vehicle infotainment system is

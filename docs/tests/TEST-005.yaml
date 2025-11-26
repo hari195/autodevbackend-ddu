@@ -1,4 +1,5 @@
 artifact_id: TEST-005
+artifact_type: test
 title: "Data Persistence on Shutdown Test"
 description: |
   Verify that all critical user data (settings, session state, media playback position)

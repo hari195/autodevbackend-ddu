@@ -1,4 +1,5 @@
 artifact_id: REQ-002
+artifact_type: requirement
 title: "Graceful Shutdown Sequence"
 description: |
   The infotainment system shall execute a graceful shutdown sequence that saves all user

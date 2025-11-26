@@ -1,4 +1,5 @@
 artifact_id: REQ-001
+artifact_type: requirement
 title: System Initialization Sequence 2
 description: >
   The infotainment system shall execute a predefined initialization sequence

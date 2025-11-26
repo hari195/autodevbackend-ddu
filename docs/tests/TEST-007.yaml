@@ -1,4 +1,5 @@
 artifact_id: TEST-007
+artifact_type: test
 title: "Error Recovery During Startup Test"
 description: |
   Test that the system attempts automatic recovery up to 3 times when encountering errors
