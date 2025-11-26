@@ -1,0 +1,114 @@
+version: 1
+artifact_types:
+  - type_name: Feature
+    type_key: feature
+    id_prefix: FT
+    id_format: "{prefix}-{number:3}"
+    folder_path: docs/features
+    attributes:
+      - name: artifact_id
+        type: string
+        required: true
+        readonly: true
+        label: Artifact ID
+      - name: title
+        type: string
+        required: true
+        label: Title
+        maxLength: 200
+      - name: description
+        type: text
+        required: false
+        label: Description
+      - name: status
+        type: enum
+        options: [draft, review, approved, deprecated]
+        default: draft
+        label: Status
+      - name: priority
+        type: enum
+        options: [low, medium, high]
+        label: Priority
+      - name: owner
+        type: string
+        label: Owner
+      - name: tags
+        type: array
+        itemType: string
+        label: Tags
+
+  - type_name: Feature Requirement
+    type_key: feature_requirement
+    id_prefix: FEAT-REQ
+    id_format: "{prefix}-{number:3}"
+    folder_path: docs/features/requirements
+    attributes:
+      - name: artifact_id
+        type: string
+        required: true
+        readonly: true
+        label: Artifact ID
+      - name: title
+        type: string
+        required: true
+        label: Title
+        maxLength: 200
+      - name: description
+        type: text
+        required: false
+        label: Description
+      - name: status
+        type: enum
+        options: [draft, review, approved, deprecated]
+        default: draft
+        label: Status
+      - name: priority
+        type: enum
+        options: [low, medium, high]
+        label: Priority
+      - name: asil_level
+        type: enum
+        options: [QM, A, B, C, D]
+        label: ASIL Level
+      - name: owner
+        type: string
+        label: Owner
+      - name: tags
+        type: array
+        itemType: string
+        label: Tags
+      - name: linked_requirements
+        type: array
+        itemType: string
+        label: Linked Requirements
+        link_target: requirement  # NEW: indicates this links to requirement type
+
+  - type_name: SW Requirement
+    type_key: requirement
+    id_prefix: REQ
+    id_format: "{prefix}-{number:3}"
+    folder_path: docs/requirements
+    attributes:
+      # ... similar structure
+
+  - type_name: Architecture
+    type_key: architecture
+    id_prefix: ARCH
+    id_format: "{prefix}-{number:3}"
+    folder_path: docs/architecture
+    attributes:
+    status: [draft, review, approved, deprecated]
+    priority: high
+    asil_level: [QM, A, B, C, D]
+    owner: lead-architect
+    tags: array of strings
+    plantuml_source: text
+      # ... includes plantuml_source field
+
+  - type_name: Test
+    type_key: test
+    id_prefix: TEST
+    id_format: "{prefix}-{number:3}"
+    folder_path: docs/tests
+    attributes:
+      # ... includes linked_requirements and linked_architecture
