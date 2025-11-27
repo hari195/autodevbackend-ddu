@@ -10,3 +10,4 @@ tags: []
 linked_requirements: [REQ-001, REQ-003]
 jira_issues:
   - SCRUM-1
+implementation_repo: https://github.com/hari195/Juggernaut
