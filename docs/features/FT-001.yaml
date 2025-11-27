@@ -7,5 +7,6 @@ priority: medium
 asil_level: QM
 owner: me
 tags: []
+linked_requirements: [REQ-001, REQ-003]
 jira_issues:
   - SCRUM-1

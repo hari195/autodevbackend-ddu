@@ -7,3 +7,4 @@ priority: medium
 asil_level: QM
 owner: me
 tags: []
+linked_requirements: [REQ-002, REQ-003]
