@@ -1,10 +1,26 @@
 artifact_id: FT-002
 artifact_type: feature
-title: test feature
-description: asokdjlak
+title: ECU Shutdown Sequence
+description: >
+  This feature implements the ECU (Electronic Control Unit) graceful shutdown sequence
+  for the vehicle infotainment system. The shutdown process ensures that all user
+  preferences, session state, and critical data are persisted to non-volatile storage
+  before the system powers down. The shutdown sequence terminates all services in the
+  correct reverse dependency order, closes active applications, and manages state
+  transitions from READY → SHUTTING_DOWN → OFF. The shutdown sequence must complete
+  within 3 seconds and maintains data integrity even if the shutdown process is
+  interrupted. State transitions during shutdown are atomic, preventing new commands
+  from being accepted during critical shutdown operations.
 status: draft
-priority: medium
-asil_level: QM
-owner: me
-tags: []
+priority: high
+asil_level: ASIL-B
+owner: system-architect
+tags:
+  - shutdown
+  - graceful-shutdown
+  - lifecycle
+  - ecu
 linked_requirements: [REQ-002, REQ-003]
+linked_architecture: [ARCH-001]
+linked_tests: [TEST-004, TEST-005, TEST-006]
+jira_issues: []
