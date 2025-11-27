@@ -2,15 +2,16 @@ artifact_id: FT-001
 artifact_type: feature
 title: ECU Startup Sequence
 description: >
-  This feature implements the ECU (Electronic Control Unit) startup sequence for the
-  vehicle infotainment system. The startup process begins when power is applied to
-  the ECU and follows a predefined initialization sequence that includes hardware
-  initialization, service discovery, component registration, and service availability
-  verification. The system transitions through states (OFF → INITIALIZING → READY)
-  following a state machine pattern, with error handling and recovery mechanisms that
-  can transition to SAFE_MODE if critical services fail to initialize. The startup
-  sequence must complete within 5 seconds from power-on, and the system provides
-  visual feedback during the initialization process.
+  This feature implements the ECU (Electronic Control Unit) startup sequence for
+  the vehicle infotainment system. The startup process begins when power is
+  applied to the ECU and follows a predefined initialization sequence that
+  includes hardware initialization, service discovery, component registration,
+  and service availability verification. The system transitions through states
+  (OFF → INITIALIZING → READY) following a state machine pattern, with error
+  handling and recovery mechanisms that can transition to SAFE_MODE if critical
+  services fail to initialize. The startup sequence must complete within 5
+  seconds from power-on, and the system provides visual feedback during the
+  initialization process.
 status: draft
 priority: high
 asil_level: ASIL-B
@@ -20,9 +21,6 @@ tags:
   - initialization
   - lifecycle
   - ecu
-linked_requirements: [REQ-001, REQ-003]
-linked_architecture: [ARCH-001]
-linked_tests: [TEST-001, TEST-002, TEST-003, TEST-006, TEST-007]
-jira_issues:
-  - SCRUM-1
-implementation_repo: https://github.com/hari195/Juggernaut
+created_at: '2025-11-27T23:53:47.611Z'
+updated_at: '2025-11-27T23:53:47.611Z'
+implementation_repo: 'https://github.com/hari195/Juggernaut'
