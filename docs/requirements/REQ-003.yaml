@@ -1,12 +1,18 @@
 artifact_id: REQ-003
-artifact_type: requirement
-title: "State Transition Management"
-description: |
-  The system shall maintain a well-defined state machine for startup and shutdown operations.
-  State transitions shall be atomic and the system shall not accept new commands during
+title: State Transition Management
+description: >
+  The system shall maintain a well-defined state machine for startup and
+  shutdown operations.
+
+  State transitions shall be atomic and the system shall not accept new commands
+  during
+
   critical state transitions (initializing, shutting_down).
 status: draft
 priority: high
-asil_level: ASIL-B
-owner: "system-architect"
-tags: [safety, functional, state-management]
+asil_level: QM
+owner: system-architect
+tags:
+  - safety
+  - functional
+  - state-management
