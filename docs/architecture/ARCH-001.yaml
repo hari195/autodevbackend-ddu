@@ -49,11 +49,13 @@ tags:
   - architecture
   - state-machine
   - startup
+created_at: '2025-11-28T12:35:44.348Z'
+updated_at: '2025-11-28T12:35:44.348Z'
 plantuml_source: |
   @startuml
   [*] --> OFF
 
-  OFF --> INITIALIZING : Power On Event
+  OFF --> INITIALIZING2 : Power On Event
 
   INITIALIZING --> INITIALIZING : Service Initializing
   INITIALIZING --> READY : All Services Ready
