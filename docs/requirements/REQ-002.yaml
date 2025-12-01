@@ -7,14 +7,11 @@ description: >
   in the correct order. The shutdown sequence shall complete within 3 seconds.
 status: draft
 priority: high
-asil_level: ASIL-B
+asil_level: B
 owner: system-architect
 tags:
   - safety
   - functional
   - shutdown
-created_at: '2025-11-27T23:53:47.611Z'
-updated_at: '2025-11-27T23:53:47.611Z'
-linked_architecture: [ARCH-001]
-linked_features: [FT-002]
-linked_tests: [TEST-004, TEST-005]
+linked_requirements: []
+review_comments: []

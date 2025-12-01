@@ -1,0 +1,17 @@
+artifact_id: TEST-010
+artifact_type: test
+title: "Message Queue Overflow Handling Test"
+description: |
+  Verify that message queues handle overflow conditions correctly when queue
+  capacity is exceeded. Test overflow handling strategies including message
+  dropping, queue expansion, and backpressure mechanisms. Verify system
+  stability under high message load conditions.
+status: draft
+priority: medium
+owner: test-engineer
+tags: [integration, communication, queuing]
+linked_requirements: [REQ-005]
+linked_architecture: [ARCH-002]
+jira_issues: []
+review_comments: []
+

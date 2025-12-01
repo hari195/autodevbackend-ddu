@@ -1,0 +1,24 @@
+artifact_id: FT-003
+artifact_type: feature
+title: Communication Middleware
+description: >
+  This feature implements a communication middleware layer for the vehicle
+  infotainment system that provides inter-process communication (IPC), message
+  routing, and service-to-service communication capabilities. The middleware
+  supports publish-subscribe patterns, request-response patterns, and event
+  broadcasting. It ensures reliable message delivery, handles message queuing,
+  and provides connection management for distributed system components. The
+  middleware abstracts communication protocols and provides a unified API for
+  system services to communicate regardless of their physical location or
+  underlying transport mechanism.
+status: draft
+priority: high
+owner: system-architect
+tags:
+  - communication
+  - middleware
+  - ipc
+  - messaging
+implementation_repo: 'https://github.com/hari195/Juggernaut'
+review_comments: []
+

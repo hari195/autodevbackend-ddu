@@ -1,0 +1,22 @@
+artifact_id: REQ-007
+artifact_type: requirement
+title: Volume Control and Audio Mixing
+description: >
+  The system shall provide independent volume control for each audio source
+  type (media, navigation, phone, notifications). The system shall support
+  global volume control and per-source volume adjustments. Audio mixing shall
+  combine multiple active audio sources according to their priority levels and
+  volume settings. The system shall prevent audio clipping and distortion
+  during mixing operations.
+status: draft
+priority: high
+asil_level: QM
+owner: system-architect
+tags:
+  - audio
+  - volume
+  - mixing
+  - functional
+linked_requirements: []
+review_comments: []
+

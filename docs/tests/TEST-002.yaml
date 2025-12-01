@@ -7,15 +7,12 @@ description: >
   to initialize.
 status: draft
 priority: high
-asil_level: QM
 owner: test-engineer
 tags:
   - integration
   - startup
   - safety
-test_type: Integration
-created_at: '2025-11-27T23:53:47.611Z'
-updated_at: '2025-11-27T23:53:47.611Z'
 linked_requirements: [REQ-001, REQ-003]
 linked_architecture: [ARCH-001]
-linked_features: [FT-001]
+jira_issues: []
+review_comments: []

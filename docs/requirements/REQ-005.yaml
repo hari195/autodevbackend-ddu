@@ -1,0 +1,21 @@
+artifact_id: REQ-005
+artifact_type: requirement
+title: Message Routing and Queuing
+description: >
+  The communication middleware shall provide message routing capabilities that
+  route messages to appropriate destinations based on message type, topic, or
+  service identifier. The system shall maintain message queues for each service
+  to handle message buffering during high load conditions. Message queues shall
+  have configurable size limits and overflow handling strategies.
+status: draft
+priority: high
+asil_level: QM
+owner: system-architect
+tags:
+  - communication
+  - routing
+  - queuing
+  - functional
+linked_requirements: []
+review_comments: []
+

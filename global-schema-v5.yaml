@@ -1,9 +1,193 @@
+version: 5
+tab_order:
+  - systems
+  - features
+  - requirements
+  - architecture
+  - implementation
+  - tests
 artifact_types:
-  - type_name: Architecture
-    type_key: architecture
-    id_prefix: ARCH
+  - type_key: feature
     id_format: '{prefix}-{number:3}'
-    folder_path: docs/architecture
+    id_prefix: FT
+    type_name: Feature
+    attributes:
+      - name: artifact_id
+        type: string
+        label: Artifact ID
+        readonly: true
+        required: true
+      - name: title
+        type: string
+        label: Title
+        required: true
+        maxLength: 200
+      - name: description
+        type: text
+        label: Description
+        required: false
+      - name: status
+        type: enum
+        label: Status
+        default: draft
+        options:
+          - draft
+          - review
+          - approved
+          - deprecated
+      - name: priority
+        type: enum
+        label: Priority
+        options:
+          - low
+          - medium
+          - high
+      - name: owner
+        type: string
+        label: Owner
+      - name: tags
+        type: array
+        label: Tags
+        itemType: string
+      - name: review_comments
+        type: array
+        label: Review Comments
+        readonly: false
+        required: false
+      - name: implementation_repo
+        type: string
+        label: Implementation Repository
+        readonly: false
+        required: false
+    folder_path: docs/features
+  - type_key: feature_requirement
+    id_format: '{prefix}-{number:3}'
+    id_prefix: FEAT-REQ
+    type_name: Feature Requirement
+    attributes:
+      - name: artifact_id
+        type: string
+        label: Artifact ID
+        readonly: true
+        required: true
+      - name: title
+        type: string
+        label: Title
+        required: true
+        maxLength: 200
+      - name: description
+        type: text
+        label: Description
+        required: false
+      - name: status
+        type: enum
+        label: Status
+        default: draft
+        options:
+          - draft
+          - review
+          - approved
+          - deprecated
+      - name: priority
+        type: enum
+        label: Priority
+        options:
+          - low
+          - medium
+          - high
+      - name: asil_level
+        type: enum
+        label: ASIL Level
+        options:
+          - QM
+          - A
+          - B
+          - C
+          - D
+      - name: owner
+        type: string
+        label: Owner
+      - name: tags
+        type: array
+        label: Tags
+        itemType: string
+      - name: linked_requirements
+        type: array
+        label: Linked Requirements
+        itemType: string
+        link_target: requirement
+      - name: review_comments
+        type: array
+        label: Review Comments
+        readonly: false
+        required: false
+    folder_path: docs/features/requirements
+  - type_key: requirement
+    id_format: '{prefix}-{number:3}'
+    id_prefix: REQ
+    type_name: SW Requirement
+    attributes:
+      - name: artifact_id
+        type: string
+        label: Artifact ID
+        readonly: true
+        required: true
+      - name: title
+        type: string
+        label: Title
+        required: true
+        maxLength: 200
+      - name: description
+        type: text
+        label: Description
+        required: false
+      - name: status
+        type: enum
+        label: Status
+        default: draft
+        options:
+          - draft
+          - review
+          - approved
+          - deprecated
+      - name: priority
+        type: enum
+        label: Priority
+        options:
+          - low
+          - medium
+          - high
+      - name: asil_level
+        type: enum
+        label: ASIL Level
+        options:
+          - QM
+          - A
+          - B
+          - C
+          - D
+      - name: owner
+        type: string
+        label: Owner
+      - name: tags
+        type: array
+        label: Tags
+        itemType: string
+      - name: linked_requirements
+        type: array
+        label: Linked Requirements
+        itemType: string
+        link_target: requirement
+      - name: review_comments
+        type: array
+        label: Review Comments
+        readonly: false
+        required: false
+    folder_path: docs/requirements
+  - type_key: architecture
+    id_format: '{prefix}-{number:3}'
+    id_prefix: ARCH
+    type_name: Architecture
     attributes:
       - name: artifact_id
         type: string
@@ -52,172 +236,26 @@ artifact_types:
         label: Tags
         itemType: string
       - name: plantuml_source
-        type: text
+        type: plantuml
         label: PlantUML Source
       - name: linked_requirements
         type: array
         label: Linked Requirements
         itemType: string
-  - type_name: Feature
-    type_key: feature
-    id_prefix: FT
-    id_format: '{prefix}-{number:3}'
-    folder_path: docs/features
-    attributes:
-      - name: artifact_id
-        type: string
-        label: Artifact ID
-        readonly: true
-        required: true
-      - name: title
-        type: string
-        label: Title
-        required: true
-        maxLength: 200
-      - name: description
-        type: text
-        label: Description
+        link_target: requirement
+      - name: jira_issues
+        type: jira_link
+        label: Jira Issues
+      - name: review_comments
+        type: array
+        label: Review Comments
+        readonly: false
         required: false
-      - name: status
-        type: enum
-        label: Status
-        default: draft
-        options:
-          - draft
-          - review
-          - approved
-          - deprecated
-      - name: priority
-        type: enum
-        label: Priority
-        options:
-          - low
-          - medium
-          - high
-      - name: owner
-        type: string
-        label: Owner
-      - name: tags
-        type: array
-        label: Tags
-        itemType: string
-  - type_name: Feature Requirement
-    type_key: feature_requirement
-    id_prefix: FEAT-REQ
+    folder_path: docs/architecture
+  - type_key: test
     id_format: '{prefix}-{number:3}'
-    folder_path: docs/features/requirements
-    attributes:
-      - name: artifact_id
-        type: string
-        label: Artifact ID
-        readonly: true
-        required: true
-      - name: title
-        type: string
-        label: Title
-        required: true
-        maxLength: 200
-      - name: description
-        type: text
-        label: Description
-        required: false
-      - name: status
-        type: enum
-        label: Status
-        default: draft
-        options:
-          - draft
-          - review
-          - approved
-          - deprecated
-      - name: priority
-        type: enum
-        label: Priority
-        options:
-          - low
-          - medium
-          - high
-      - name: asil_level
-        type: enum
-        label: ASIL Level
-        options:
-          - QM
-          - A
-          - B
-          - C
-          - D
-      - name: owner
-        type: string
-        label: Owner
-      - name: tags
-        type: array
-        label: Tags
-        itemType: string
-      - name: linked_requirements
-        type: array
-        label: Linked Requirements
-        itemType: string
-  - type_name: SW Requirement
-    type_key: requirement
-    id_prefix: REQ
-    id_format: '{prefix}-{number:3}'
-    folder_path: docs/requirements
-    attributes:
-      - name: artifact_id
-        type: string
-        label: Artifact ID
-        readonly: true
-        required: true
-      - name: title
-        type: string
-        label: Title
-        required: true
-        maxLength: 200
-      - name: description
-        type: text
-        label: Description
-        required: false
-      - name: status
-        type: enum
-        label: Status
-        default: draft
-        options:
-          - draft
-          - review
-          - approved
-          - deprecated
-      - name: priority
-        type: enum
-        label: Priority
-        options:
-          - low
-          - medium
-          - high
-      - name: asil_level
-        type: enum
-        label: ASIL Level
-        options:
-          - QM
-          - A
-          - B
-          - C
-          - D
-      - name: owner
-        type: string
-        label: Owner
-      - name: tags
-        type: array
-        label: Tags
-        itemType: string
-      - name: linked_requirements
-        type: array
-        label: Linked Requirements
-        itemType: string
-  - type_name: Test
-    type_key: test
     id_prefix: TEST
-    id_format: '{prefix}-{number:3}'
-    folder_path: docs/tests
+    type_name: Test
     attributes:
       - name: artifact_id
         type: string
@@ -260,7 +298,18 @@ artifact_types:
         type: array
         label: Linked Requirements
         itemType: string
+        link_target: requirement
       - name: linked_architecture
         type: array
         label: Linked Architecture
         itemType: string
+        link_target: architecture
+      - name: jira_issues
+        type: jira_link
+        label: Jira Issues
+      - name: review_comments
+        type: array
+        label: Review Comments
+        readonly: false
+        required: false
+    folder_path: docs/tests

@@ -1,0 +1,17 @@
+artifact_id: TEST-008
+artifact_type: test
+title: "IPC Message Delivery Test"
+description: |
+  Verify that messages are correctly delivered between services using the IPC
+  mechanism. Test both synchronous and asynchronous message delivery patterns,
+  including publish-subscribe and request-response scenarios. Verify message
+  integrity and ordering.
+status: draft
+priority: high
+owner: test-engineer
+tags: [integration, communication, ipc]
+linked_requirements: [REQ-004]
+linked_architecture: [ARCH-002]
+jira_issues: []
+review_comments: []
+

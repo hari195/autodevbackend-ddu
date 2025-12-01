@@ -1,0 +1,18 @@
+artifact_id: TEST-012
+artifact_type: test
+title: "Volume Control and Mixing Test"
+description: |
+  Verify that volume control works correctly for each audio source type and
+  global volume settings. Test audio mixing with multiple concurrent sources
+  at different volume levels. Verify that audio mixing prevents clipping and
+  distortion, and that volume changes are applied smoothly without audible
+  artifacts.
+status: draft
+priority: high
+owner: test-engineer
+tags: [integration, audio, mixing]
+linked_requirements: [REQ-007]
+linked_architecture: [ARCH-003]
+jira_issues: []
+review_comments: []
+

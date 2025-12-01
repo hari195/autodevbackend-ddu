@@ -14,18 +14,11 @@ description: >
   initialization process.
 status: draft
 priority: high
-asil_level: ASIL-B
 owner: system-architect
 tags:
   - startup
   - initialization
   - lifecycle
   - ecu
-created_at: '2025-11-27T23:53:47.611Z'
-updated_at: '2025-11-27T23:53:47.611Z'
 implementation_repo: 'https://github.com/hari195/Juggernaut'
-jira_issues:
-  - SCRUM-1
-linked_requirements: [REQ-001, REQ-003]
-linked_architecture: [ARCH-001]
-linked_tests: [TEST-001, TEST-002, TEST-003, TEST-006, TEST-007]
+review_comments: []

@@ -1,0 +1,18 @@
+artifact_id: TEST-011
+artifact_type: test
+title: "Audio Playback and Routing Test"
+description: |
+  Verify that audio from different sources (media, navigation, phone,
+  notifications) is correctly routed to appropriate output channels. Test
+  priority-based routing where high-priority audio (phone, navigation) can
+  interrupt or mix with lower-priority audio (media). Verify audio quality and
+  absence of artifacts during routing transitions.
+status: draft
+priority: high
+owner: test-engineer
+tags: [integration, audio, routing]
+linked_requirements: [REQ-006]
+linked_architecture: [ARCH-003]
+jira_issues: []
+review_comments: []
+

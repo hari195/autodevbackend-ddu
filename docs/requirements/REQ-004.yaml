@@ -1,0 +1,20 @@
+artifact_id: REQ-004
+artifact_type: requirement
+title: Inter-Process Communication Support
+description: >
+  The system shall provide inter-process communication (IPC) capabilities that
+  allow system services to exchange messages and data. The IPC mechanism shall
+  support both synchronous and asynchronous communication patterns, including
+  publish-subscribe, request-response, and event broadcasting. Message delivery
+  shall be reliable with guaranteed delivery for critical messages.
+status: draft
+priority: high
+asil_level: QM
+owner: system-architect
+tags:
+  - communication
+  - ipc
+  - functional
+linked_requirements: []
+review_comments: []
+

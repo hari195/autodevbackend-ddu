@@ -1,0 +1,22 @@
+artifact_id: REQ-006
+artifact_type: requirement
+title: Audio Playback and Routing
+description: >
+  The system shall support audio playback from multiple sources including
+  media files, streaming audio, navigation prompts, phone calls, and system
+  notifications. The system shall route audio to appropriate output channels
+  (speakers, headphones) based on source type and user preferences. Audio
+  routing shall support priority-based mixing where higher-priority audio
+  sources can interrupt or mix with lower-priority sources.
+status: draft
+priority: high
+asil_level: QM
+owner: system-architect
+tags:
+  - audio
+  - playback
+  - routing
+  - functional
+linked_requirements: []
+review_comments: []
+

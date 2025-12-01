@@ -1,0 +1,18 @@
+artifact_id: TEST-013
+artifact_type: test
+title: "Audio Source Priority and Interruption Test"
+description: |
+  Verify that audio source priority rules are correctly enforced. Test that
+  high-priority audio sources (phone calls, navigation prompts) can interrupt
+  lower-priority sources (media playback) and that interrupted sources resume
+  correctly when high-priority audio completes. Verify that multiple sources
+  can coexist when their priorities allow.
+status: draft
+priority: medium
+owner: test-engineer
+tags: [integration, audio, priority]
+linked_requirements: [REQ-006, REQ-007]
+linked_architecture: [ARCH-003]
+jira_issues: []
+review_comments: []
+

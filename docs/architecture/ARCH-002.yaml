@@ -1,0 +1,91 @@
+artifact_id: ARCH-002
+artifact_type: architecture
+title: Communication Middleware Architecture
+description: >
+  The communication middleware architecture provides a layered communication
+  framework for the infotainment system. The architecture consists of the
+  following key components:
+
+  1. **Message Bus**: Central message routing component that manages message
+     distribution to subscribers based on topics, message types, and routing
+     rules.
+
+  2. **Service Registry**: Maintains a registry of all services and their
+     communication endpoints, enabling dynamic service discovery and connection
+     management.
+
+  3. **Message Queue Manager**: Manages per-service message queues with
+     configurable capacity, priority handling, and overflow management.
+
+  4. **Transport Layer**: Abstracts underlying communication protocols (shared
+     memory, sockets, D-Bus, etc.) and provides a unified interface for message
+     transmission.
+
+  5. **Connection Manager**: Handles service connection lifecycle, including
+     connection establishment, health monitoring, and automatic reconnection
+     on failures.
+
+  6. **Message Serialization**: Handles message encoding/decoding for different
+     data formats (JSON, Protocol Buffers, etc.) to ensure interoperability
+     between services.
+
+  The architecture supports multiple communication patterns including
+  publish-subscribe, request-response, and event-driven messaging. All
+  communication is logged for diagnostics and debugging purposes.
+status: draft
+priority: high
+asil_level: QM
+owner: lead-architect
+tags:
+  - architecture
+  - communication
+  - middleware
+  - messaging
+plantuml_source: |
+  @startuml
+  package "Communication Middleware" {
+    [Message Bus] as MB
+    [Service Registry] as SR
+    [Message Queue Manager] as MQM
+    [Connection Manager] as CM
+    [Transport Layer] as TL
+    [Message Serialization] as MS
+  }
+
+  package "System Services" {
+    [Service A] as SA
+    [Service B] as SB
+    [Service C] as SC
+  }
+
+  SA --> MB : Publish/Subscribe
+  SB --> MB : Request/Response
+  SC --> MB : Event Broadcasting
+
+  MB --> SR : Service Discovery
+  MB --> MQM : Queue Management
+  MB --> CM : Connection Management
+  MB --> TL : Message Transport
+  MB --> MS : Serialization
+
+  TL --> SA : Message Delivery
+  TL --> SB : Message Delivery
+  TL --> SC : Message Delivery
+
+  note right of MB
+    - Topic-based routing
+    - Message filtering
+    - Load balancing
+  end note
+
+  note right of MQM
+    - Priority queues
+    - Overflow handling
+    - Queue monitoring
+  end note
+
+  @enduml
+linked_requirements: [REQ-004, REQ-005]
+jira_issues: []
+review_comments: []
+

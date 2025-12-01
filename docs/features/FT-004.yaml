@@ -1,0 +1,24 @@
+artifact_id: FT-004
+artifact_type: feature
+title: Audio Support
+description: >
+  This feature provides comprehensive audio support for the vehicle infotainment
+  system, including audio playback, audio routing, volume control, and audio
+  mixing capabilities. The feature supports multiple audio sources including
+  media playback, navigation prompts, phone calls, and system notifications.
+  Audio routing manages which audio sources are active and how they are mixed
+  together, with priority-based mixing that ensures critical audio (e.g.,
+  navigation, phone calls) can interrupt or mix with lower-priority audio
+  sources. The feature includes hardware abstraction for audio drivers and
+  provides a unified audio API for system services.
+status: draft
+priority: high
+owner: system-architect
+tags:
+  - audio
+  - playback
+  - routing
+  - multimedia
+implementation_repo: 'https://github.com/hari195/Juggernaut'
+review_comments: []
+
