@@ -3,59 +3,51 @@ artifact_type: architecture
 title: Infotainment System Startup and Shutdown Architecture
 description: >
   The startup and shutdown architecture for the vehicle infotainment system is
-  based on a
-
-  state machine pattern with clear separation of concerns. The system consists
-  of the following
-
-  key components:
-
+  based on a state machine pattern with clear separation of concerns. The system
+  consists of the following key components:
 
   1. **State Manager**: Central component that manages the state machine and
-  coordinates
-     transitions between states (OFF, INITIALIZING, READY, SHUTTING_DOWN, ERROR, SAFE_MODE).
+     coordinates transitions between states (OFF, INITIALIZING, READY,
+     SHUTTING_DOWN, ERROR, SAFE_MODE).
 
   2. **Initialization Service**: Handles the startup sequence, including
-  hardware initialization,
-     service discovery, and component registration. It follows a dependency-ordered initialization
-     pattern where services are initialized based on their dependencies.
+     hardware initialization, service discovery, and component registration.
+     It follows a dependency-ordered initialization pattern where services are
+     initialized based on their dependencies.
 
   3. **Shutdown Service**: Manages the graceful shutdown process, ensuring all
-  services are
-     terminated in reverse dependency order and all data is persisted.
+     services are terminated in reverse dependency order and all data is
+     persisted.
 
-  4. **Service Registry**: Maintains a registry of all system services and their
-  status,
-     allowing the state manager to verify service availability before state transitions.
+  4. **Service Registry**: Maintains a registry of all system services and
+     their status, allowing the state manager to verify service availability
+     before state transitions.
 
   5. **Persistence Layer**: Handles saving and restoring system state, user
-  preferences, and
-     session data to non-volatile storage.
+     preferences, and session data to non-volatile storage.
 
   6. **Error Handler**: Implements error recovery strategies and manages
-  transitions to error
-     states or safe mode when critical failures occur.
+     transitions to error states or safe mode when critical failures occur.
 
   The architecture follows a layered approach with clear interfaces between
-  components, enabling
-
-  testability and maintainability. State transitions are event-driven and logged
-  for diagnostics.
+  components, enabling testability and maintainability. State transitions are
+  event-driven and logged for diagnostics.
 status: approved
 priority: high
-asil_level: B
+asil_level: ASIL-B
 owner: lead-architect
 tags:
   - architecture
   - state-machine
   - startup
+  - shutdown
 created_at: '2025-11-28T12:35:44.348Z'
 updated_at: '2025-11-28T12:35:44.348Z'
 plantuml_source: |
   @startuml
   [*] --> OFF
 
-  OFF --> INITIALIZING2 : Power On Event
+  OFF --> INITIALIZING : Power On Event
 
   INITIALIZING --> INITIALIZING : Service Initializing
   INITIALIZING --> READY : All Services Ready
@@ -98,7 +90,6 @@ plantuml_source: |
   end note
 
   @enduml
-linked_requirements:
-  - REQ-001
-  - REQ-002
-  - REQ-003
+linked_requirements: [REQ-001, REQ-002, REQ-003]
+linked_features: [FT-001, FT-002]
+linked_tests: [TEST-001, TEST-002, TEST-003, TEST-004, TEST-005, TEST-006, TEST-007]

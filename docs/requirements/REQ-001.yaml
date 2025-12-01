@@ -1,14 +1,11 @@
 artifact_id: REQ-001
 artifact_type: requirement
-title: System Initialization Sequence 2
+title: System Initialization Sequence
 description: >
   The infotainment system shall execute a predefined initialization sequence
-  during startup,
-
-  including hardware initialization, service discovery, and component
-  registration.
-
-  The system shall complete initialization within 5 seconds from power-on.
+  during startup, including hardware initialization, service discovery, and
+  component registration. The system shall complete initialization within 5
+  seconds from power-on.
 status: draft
 priority: high
 asil_level: QM
@@ -17,3 +14,8 @@ tags:
   - safety
   - functional
   - startup
+created_at: '2025-11-27T23:53:47.611Z'
+updated_at: '2025-11-27T23:53:47.611Z'
+linked_architecture: [ARCH-001]
+linked_features: [FT-001]
+linked_tests: [TEST-001, TEST-002, TEST-003]

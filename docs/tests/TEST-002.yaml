@@ -3,10 +3,8 @@ artifact_type: test
 title: Service Availability Verification Test
 description: >
   Test that the system correctly verifies service availability during startup.
-  Verify that
-
-  the system enters degraded/SAFE_MODE when a critical service fails to
-  initialize.
+  Verify that the system enters degraded/SAFE_MODE when a critical service fails
+  to initialize.
 status: draft
 priority: high
 asil_level: QM
@@ -15,8 +13,9 @@ tags:
   - integration
   - startup
   - safety
-linked_requirements:
-  - REQ-001
-  - REQ-003
-linked_architecture:
-  - ARCH-001
+test_type: Integration
+created_at: '2025-11-27T23:53:47.611Z'
+updated_at: '2025-11-27T23:53:47.611Z'
+linked_requirements: [REQ-001, REQ-003]
+linked_architecture: [ARCH-001]
+linked_features: [FT-001]
